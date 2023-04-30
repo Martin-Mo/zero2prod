@@ -72,6 +72,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install postgresql-client -y
 
       - name: Migrate database
+        env:
+          POSTGRES_DB: "newsletter"
         run: SKIP_DOCKER=true ./scripts/init_db.sh
 
       - name: Run tests

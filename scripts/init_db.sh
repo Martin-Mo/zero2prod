@@ -51,4 +51,4 @@ export DATABASE_URL
 sqlx database create
 sqlx migrate run
 
-echo "Postgres has been migrated, ready to go!"
+#echo "Postgres has been migrated, ready to go!"
