@@ -35,6 +35,7 @@ jobs:
           POSTGRES_USER: "${{env.POSTGRES_USER}}"
           POSTGRES_PASSWORD: "${{env.POSTGRES_PASSWORD}}"
           POSTGRES_DB: "${{env.POSTGRES_DB}}"
+          POSTGRES_PORT: "${{env.POSTGRES_PORT}}"
         # When you map ports using the ports keyword, GitHub uses the --publish command to publish the container’s ports to the Docker host
         # Opens tcp port 5432 on the host and service container
         ports:
@@ -102,6 +103,7 @@ jobs:
           POSTGRES_USER: "${{env.POSTGRES_USER}}"
           POSTGRES_PASSWORD: "${{env.POSTGRES_PASSWORD}}"
           POSTGRES_DB: "${{env.POSTGRES_DB}}"
+          POSTGRES_PORT: "${{env.POSTGRES_PORT}}"
         ports:
           - "${{env.POSTGRES_PORT}}:5432"
     steps:
@@ -137,6 +139,7 @@ jobs:
           POSTGRES_USER: "${{env.POSTGRES_USER}}"
           POSTGRES_PASSWORD: "${{env.POSTGRES_PASSWORD}}"
           POSTGRES_DB: "${{env.POSTGRES_DB}}"
+          POSTGRES_PORT: "${{env.POSTGRES_PORT}}"
         ports:
           - "${{env.POSTGRES_PORT}}:5432"
     steps:
